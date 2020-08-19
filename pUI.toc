@@ -16,6 +16,6 @@ NoError.lua
 ## NumQuest.lua
 RaidFrameReSizer.lua
 Repair.lua
-profilaSettings.lua
+##profilaSettings.lua
 Tooltip.lua
 pUI.lua
