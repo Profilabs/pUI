@@ -1,5 +1,5 @@
 ## Interface: 80000
-## Title: |cff63afc8pUI|cffffffffSettings|r
+## Title: |cffCC3333 p|rUI
 ## Author: various
 
 ## Bossframes.lua
@@ -7,7 +7,7 @@
 Chat.lua
 Classcolors.lua
 Classicons.lua
-CopyUrl.lua
+## CopyUrl.lua
 Durability.lua
 ## Guildtab.lua
 Hotkey.lua
@@ -16,6 +16,6 @@ NoError.lua
 ## NumQuest.lua
 RaidFrameReSizer.lua
 Repair.lua
-##profilaSettings.lua
+## profilaSettings.lua
 Tooltip.lua
 pUI.lua
