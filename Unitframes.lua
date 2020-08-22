@@ -14,6 +14,7 @@ local t={
 	ContainerFrame1BackgroundTop,
 	MinimapBorderTop,
   MinimapBorder,
+  MiniMapTrackingBorder,
   PlayerFrameTexture,
   TargetFrameTextureFrameTexture,
 	TargetFrameToTTextureFrameTexture,

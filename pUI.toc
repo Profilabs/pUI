@@ -5,7 +5,7 @@
 ## Bossframes.lua
 Castbars.lua
 Chat.lua
-Classcolors.lua
+## Classcolors.lua
 Classicons.lua
 ## CopyUrl.lua
 Durability.lua
