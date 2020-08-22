@@ -3,7 +3,7 @@
 ## Author: various
 
 ## Bossframes.lua
-## Castbars.lua
+Castbars.lua
 Chat.lua
 Classcolors.lua
 Classicons.lua

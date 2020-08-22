@@ -66,7 +66,7 @@ MinimapBorderTop:Hide()
 -- action bar location
 MainMenuBar:SetScale(0.8)
 MainMenuBar:ClearAllPoints()
-MainMenuBar:SetPoint('BOTTOM', UIParent, 256, -125)
+MainMenuBar:SetPoint('BOTTOM', UIParent, 256, 125)
 --pet bar
 --PetActionBarFrame:SetScale(0.8)
 --PetActionBarFrame:ClearAllPoints()
@@ -279,13 +279,13 @@ COMBAT_TEXT_TYPE_INFO["HEAL_ABSORB"] = {var = nil, show = nil}
 --end)
 
 --[[Frame placement]]--
-PlayerFrame:ClearAllPoints()
-PlayerFrame:SetPoint("CENTER",UIParent,-250,-60)
-PlayerFrame.SetPoint=function()end
+--PlayerFrame:ClearAllPoints()
+--PlayerFrame:SetPoint("CENTER",UIParent,-250,-60)
+--PlayerFrame.SetPoint=function()end
 
-TargetFrame:ClearAllPoints()
-TargetFrame:SetPoint("CENTER",UIParent,250,-60)
-TargetFrame.SetPoint=function()end
+--TargetFrame:ClearAllPoints()
+--TargetFrame:SetPoint("CENTER",UIParent,250,-60)
+--TargetFrame.SetPoint=function()end
 
 --[[ Some slash commands ]]
 SlashCmdList["FRAME"] = function() print(GetMouseFocus():GetName()) end

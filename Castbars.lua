@@ -1,6 +1,6 @@
 --[[ Player castbar ]]
 CastingBarFrame:SetSize(180,10)
-CastingBarFrame:SetScale("1.4")
+CastingBarFrame:SetScale("1.2")
 CastingBarFrame:ClearAllPoints()
 CastingBarFrame:SetPoint("TOP", WorldFrame, "BOTTOM", 0, 180) --0, 100
 CastingBarFrame.SetPoint = function() end 
