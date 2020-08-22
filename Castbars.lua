@@ -22,7 +22,7 @@ CastingBarFrame.Icon:SetWidth(22)
 --[[ Castbar timer from thek ]]
 CastingBarFrame.timer = CastingBarFrame:CreateFontString(nil)
 CastingBarFrame.timer:SetFont("Fonts\\ARIALN.ttf", 13, "THINOUTLINE")
-CastingBarFrame.timer:SetPoint("RIGHT", CastingBarFrame, "RIGHT", 24, 0)
+CastingBarFrame.timer:SetPoint("TOP", CastingBarFrame, "TOP", 0, 25)
 CastingBarFrame.update = 0.1
      
 --TargetFrameSpellBar.timer = TargetFrameSpellBar:CreateFontString(nil)

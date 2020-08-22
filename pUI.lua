@@ -172,8 +172,8 @@ end
 
 
 --[[ PvP Icon ]]
-PlayerPVPIcon:SetAlpha(0)
-TargetFrameTextureFramePVPIcon:SetAlpha(0)
+--PlayerPVPIcon:SetAlpha(0)
+--TargetFrameTextureFramePVPIcon:SetAlpha(0)
 --FocusFrameTextureFramePVPIcon:SetAlpha(0)
 --for i = 1, MAX_PARTY_MEMBERS do
 --_G["PartyMemberFrame"..i.."PVPIcon"]:Hide()
@@ -182,18 +182,18 @@ TargetFrameTextureFramePVPIcon:SetAlpha(0)
 --end
 
 --[[ Hide ]]
-hooksecurefunc(	"PlayerFrame_UpdateStatus",	function()
-		PlayerStatusTexture:Hide()
-		PlayerRestGlow:Hide()
-		PlayerStatusGlow:Hide()
-		PlayerPrestigeBadge:SetAlpha(0)
-		PlayerPrestigePortrait:SetAlpha(0)
-		TargetFrameTextureFramePrestigeBadge:SetAlpha(0)
-		TargetFrameTextureFramePrestigePortrait:SetAlpha(0)
+--hooksecurefunc(	"PlayerFrame_UpdateStatus",	function()
+--		PlayerStatusTexture:Hide()
+--		PlayerRestGlow:Hide()
+--		PlayerStatusGlow:Hide()
+--		PlayerPrestigeBadge:SetAlpha(0)
+--		PlayerPrestigePortrait:SetAlpha(0)
+--		TargetFrameTextureFramePrestigeBadge:SetAlpha(0)
+--		TargetFrameTextureFramePrestigePortrait:SetAlpha(0)
 --		FocusFrameTextureFramePrestigeBadge:SetAlpha(0)
 --		FocusFrameTextureFramePrestigePortrait:SetAlpha(0)
-	end
-)
+--	end
+--)
 
 --[[ Disable healing spam floating combat text ]]
 LoadAddOn("Blizzard_CombatText")
@@ -203,56 +203,6 @@ COMBAT_TEXT_TYPE_INFO["HEAL"] = {var = nil, show = nil}
 COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL_ABSORB"] = {var = nil, show = nil}
 COMBAT_TEXT_TYPE_INFO["HEAL_CRIT_ABSORB"] = {var = nil, show = nil}
 COMBAT_TEXT_TYPE_INFO["HEAL_ABSORB"] = {var = nil, show = nil}
-
---[[ Make the Quest-tracker moveable ]]
-
---local otf = ObjectiveTrackerFrame
---local otfheight = 450
---local otfwidth = 188
-   
---otf:SetClampedToScreen(true)
---otf:ClearAllPoints()
---otf.ClearAllPoints = function() end
---otf:SetPoint("TOPRIGHT", MinimapCluster, "BOTTOM", 45, -5) 
---otf.SetPoint = function() end
---otf:SetMovable(true)
---otf:SetUserPlaced(true)
---otf:SetHeight(otfheight)
---otf:SetWidth(otfwidth)
-    
---local otfmove = CreateFrame("FRAME", nil, otf)  
---otfmove:SetHeight(16)
---otfmove:SetPoint("TOPLEFT", otf, 110, 0)
---otfmove:SetPoint("TOPRIGHT", otf)
---otfmove:EnableMouse(true)
---otfmove:RegisterForDrag("LeftButton")
---otfmove:SetHitRectInsets(-5, -5, -5, -5)
-    
---local function OTFM_Tooltip(self)
---    GameTooltip:SetOwner(self, "ANCHOR_TOP")
---    GameTooltip:AddLine("� Shift + drag to move", 0, 1, .5)
---    GameTooltip:Show()
---end
-    
---otfmove:SetScript("OnDragStart", function(self, button)
--- 	if IsModifiedClick() and button=="LeftButton" then
---    	local f = self:GetParent()
---    	f:StartMoving()
---       end
---  end)
-    
---otfmove:SetScript("OnDragStop", function(self, button)
---    local f = self:GetParent()
---    f:StopMovingOrSizing()
---end)
-    
---otfmove:SetScript("OnEnter", function(s)
---    OTFM_Tooltip(s)
---end)
-    
---otfmove:SetScript("OnLeave", function(s)
---    GameTooltip:Hide()
---end)
 
 --[[Frame placement]]--
 --PlayerFrame:ClearAllPoints()
