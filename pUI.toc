@@ -1,22 +1,13 @@
-## Interface: 80000
+## Interface: 11305
 ## Title: |cffCC3333 p|rUI
 ## Author: various
 
-## Bossframes.lua
 Castbars.lua
 Chat.lua
-## Classcolors.lua
-Classicons.lua
-## CopyUrl.lua
-Durability.lua
-## Guildtab.lua
-Hotkey.lua
 Minimap.lua
-NoError.lua
-## NumQuest.lua
 RaidFrameReSizer.lua
-Repair.lua
-## profilaSettings.lua
-Tooltip.lua
 Unitframes.lua
 Actionsbars.lua
+UnitFramesImproved.lua
+nbuff\config.lua
+nbuff\core.lua
