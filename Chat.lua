@@ -72,8 +72,8 @@ local function ProcessFrame(frame)
 
 	local editbox = _G[name .. "EditBox"]
 	editbox:ClearAllPoints()
---	editbox:SetPoint('BOTTOMLEFT', ChatFrame1, 'TOPLEFT', -7, 25)
---	editbox:SetPoint('BOTTOMRIGHT', ChatFrame1, 'TOPRIGHT', 10, 25) 
+	editbox:SetPoint('LEFT', ChatFrame1, 'BOTTOMLEFT', -18, -20)
+	editbox:SetPoint('RIGHT', ChatFrame1, 'BOTTOMRIGHT', 0, -25) 
 	editbox:SetAltArrowKeyMode(false)
 
 	frames[frame] = true

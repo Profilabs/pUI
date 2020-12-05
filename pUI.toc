@@ -1,5 +1,5 @@
 ## Interface: 11305
-## Title: |cffCC3333 p|rUI
+## Title:|cffCC3333 p|rUI
 ## Author: various
 
 ##Castbars.lua
@@ -11,3 +11,5 @@ Actionsbars.lua
 ##UnitFramesImproved.lua
 nbuff\config.lua
 nbuff\core.lua
+daftNameCastBars\daftNameCastBars.lua
+daftNameCastBars\Options.lua
