@@ -72,8 +72,8 @@ local function ProcessFrame(frame)
 
 	local editbox = _G[name .. "EditBox"]
 	editbox:ClearAllPoints()
-	editbox:SetPoint('BOTTOMLEFT', ChatFrame1, 'TOPLEFT', -7, 25)
-	editbox:SetPoint('BOTTOMRIGHT', ChatFrame1, 'TOPRIGHT', 10, 25) 
+--	editbox:SetPoint('BOTTOMLEFT', ChatFrame1, 'TOPLEFT', -7, 25)
+--	editbox:SetPoint('BOTTOMRIGHT', ChatFrame1, 'TOPRIGHT', 10, 25) 
 	editbox:SetAltArrowKeyMode(false)
 
 	frames[frame] = true
@@ -91,19 +91,20 @@ FCF_OpenTemporaryWindow = function(...)
 	ProcessFrame(frame)
 	return frame
 end
+
 -- Chat Scroll Module
-function FloatingChatFrame_OnMouseScroll(self, delta)
-	if delta > 0 then
-		if IsShiftKeyDown() then
-			self:ScrollToTop()
-		else	
-			self:ScrollUp()
-		end
-	elseif delta < 0 then
-		if IsShiftKeyDown() then
-			self:ScrollToBottom()
-		else
-			self:ScrollDown()
-		end
-	end	
-end
+--function FloatingChatFrame_OnMouseScroll(self, delta)
+--	if delta > 0 then
+--		if IsShiftKeyDown() then
+--			self:ScrollToTop()
+--		else	
+--			self:ScrollUp()
+--		end
+--	elseif delta < 0 then
+--		if IsShiftKeyDown() then
+--			self:ScrollToBottom()
+--		else
+--			self:ScrollDown()
+--		end
+--	end	
+--end
