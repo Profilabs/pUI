@@ -42,5 +42,3 @@
 			end)
 		end
 	end)
--- scaling classhall button  
-  --GarrisonLandingPageMinimapButton:SetScale(.85)

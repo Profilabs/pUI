@@ -30,11 +30,6 @@ CastingBarFrame.update = 0.1
 --TargetFrameSpellBar.timer:SetPoint("RIGHT", TargetFrameSpellBar, "RIGHT", 24, 0)
 --TargetFrameSpellBar.update = 0.1
      
---FocusFrameSpellBar.timer = FocusFrameSpellBar:CreateFontString(nil)
---FocusFrameSpellBar.timer:SetFont("Fonts\\ARIALN.ttf", 13, "THINOUTLINE")
---FocusFrameSpellBar.timer:SetPoint("RIGHT", FocusFrameSpellBar, "RIGHT", 24, 0)
---FocusFrameSpellBar.update = 0.1
-     
 local function CastingBarFrame_OnUpdate_Hook(self, elapsed)
 	if not self.timer then return end
 	if self.update and self.update < elapsed then
@@ -53,18 +48,6 @@ end
 
 CastingBarFrame:HookScript('OnUpdate', CastingBarFrame_OnUpdate_Hook)
 --TargetFrameSpellBar:HookScript('OnUpdate', CastingBarFrame_OnUpdate_Hook)
---FocusFrameSpellBar:HookScript('OnUpdate', CastingBarFrame_OnUpdate_Hook)
-     
---[[ Focus Castbar ]]
---hooksecurefunc(FocusFrameSpellBar, "Show", function()
---   FocusFrameSpellBar:SetScale("1.4")
---   --FocusFrameSpellBar:ClearAllPoints()
---   --FocusFrameSpellBar:SetPoint("CENTER", UIParent, "CENTER", 0, 150)
-   --FocusFrameSpellBar.SetPoint = function() end 
---end)
-     
---FocusFrameSpellBar:SetStatusBarColor(0,0.45,0.9)
---FocusFrameSpellBar.SetStatusBarColor = function() end
 
 --[[ Target Castbar ]]
 --hooksecurefunc(TargetFrameSpellBar, "Show", function()
