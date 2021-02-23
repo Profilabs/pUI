@@ -15,10 +15,14 @@ local t={
 	MinimapBorderTop,
   MinimapBorder,
   MiniMapTrackingBorder,
+  MiniMapTrackingButtonBorder,
   PlayerFrameTexture,
   TargetFrameTextureFrameTexture,
 	TargetFrameToTTextureFrameTexture,
   PetFrameTexture,
+  CharacterFrameBg,
+	CharacterFrameTitleBg,
+	CompactRaidFrameManagerBg,
   CastingBarFrame.Border
  }
 -- change these rgb values to change the color of the
@@ -50,6 +54,23 @@ hooksecurefunc("PlayerFrame_UpdateStatus", function()
        PlayerStatusGlow:Hide()
     end
 end)
+
+--Move Target Frame Debuffs
+--hooksecurefunc("TargetFrame_UpdateBuffAnchor", function()
+--  if TargetFrameBuff1 then
+--    TargetFrameBuff1:ClearAllPoints()
+--    TargetFrameBuff1:SetPoint("TOP", UIParent, "CENTER", -48, -30)
+--  end
+--end)
+
+hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function()
+  if TargetFrameDebuff1 then
+    TargetFrameDebuff1:ClearAllPoints()
+    TargetFrameDebuff1:SetPoint("TOP", UIParent, "CENTER", 125, 0)
+  end
+end)
+
+local noop = function() return end
 
 --[[ Unitframes ]]
 --TotemFrame:ClearAllPoints() 

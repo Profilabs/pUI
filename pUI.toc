@@ -2,14 +2,14 @@
 ## Title:|cffCC3333 p|rUI
 ## Author: various
 
-##Castbars.lua
+Castbars.lua
 Chat.lua
 Minimap.lua
-RaidFrameReSizer.lua
-Unitframes.lua
+##RaidFrameReSizer.lua
+core.lua
 Actionsbars.lua
-##UnitFramesImproved.lua
+UnitFramesImproved.lua
 nbuff\config.lua
 nbuff\core.lua
-daftNameCastBars\daftNameCastBars.lua
-daftNameCastBars\Options.lua
+##daftNameCastBars\daftNameCastBars.lua
+##daftNameCastBars\Options.lua

@@ -63,7 +63,7 @@ end
 
 function UnitFramesImproved_LoadDefaultSettings()
 	characterSettings = {}
-	characterSettings["FrameScale"] = "1.0";
+	characterSettings["FrameScale"] = "1.1";
 	
 	if not TargetFrame:IsUserPlaced() then
 		TargetFrame:SetPoint("TOPLEFT", PlayerFrame, "TOPRIGHT", 36, 0);

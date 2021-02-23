@@ -57,7 +57,7 @@ MainMenuBarPerformanceBar:Hide()
 ActionBarDownButton:Hide()
 ActionBarUpButton:Hide()
 -- action bar location
-MainMenuBar:SetScale(0.8)
+--MainMenuBar:SetScale(0.8)
 MainMenuBar:ClearAllPoints()
 MainMenuBar:SetPoint('BOTTOMLEFT', UIParent, 5, 5)
 --pet bar
