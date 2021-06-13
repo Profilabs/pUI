@@ -5,12 +5,12 @@ local MyUnits = {player = true, vehicle = true, pet = true}
 local class = select(2, UnitClass("player"))
 
 local Misc = CreateFrame("Frame")
-Misc.font = "Interface\\Addons\\"..addon.."\\Media\\".."number.ttf"
+Misc.font = "Interface\\Addons\\pUI\\FastFilger\\Media\\".."number.ttf"
 Misc.numSize = 14                   -- 层数, 计时条的计时数字大小
 Misc.barNumSize = 12                -- 计时条的计时数字大小
 Misc.barNameSize = 12               -- 计时条法术名称字体大小
 Misc.maxTestIcon = 8                -- 测试模式下,每项显示最大图标数量
-Misc.mult = 1 
+Misc.mult = 1
 
 function Filger:SetTemplate(bar)
     SetTemplate(self, bar)
@@ -214,7 +214,7 @@ function Filger:DisplayActives()
             bar.spellID = 0
             self.bars[index] = bar
         end
-        
+
         Filger.SetTemplate(self, bar)
 
         previous = bar
@@ -225,7 +225,7 @@ function Filger:DisplayActives()
     for _, value in pairs(self.actives) do
         table.insert(temp, value)
     end
-    
+
     local function comp(element1, elemnet2)
         return element1.sort <= elemnet2.sort
     end
@@ -293,7 +293,7 @@ function Filger:DisplayActives()
     end
 end
 
-function Filger:ResetGroup(spells)  
+function Filger:ResetGroup(spells)
     local needUpdate = false
     for id, data in pairs(spells) do
         local found = false
