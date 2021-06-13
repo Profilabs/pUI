@@ -1,41 +1,17 @@
-local t={
-	ContainerFrame5BackgroundTop,
-  ContainerFrame5BackgroundMiddle1,
-  ContainerFrame5BackgroundBottom,
-	ContainerFrame4BackgroundTop,
-  ContainerFrame4BackgroundMiddle1,
-  ContainerFrame4BackgroundBottom,
-	ContainerFrame3BackgroundTop,
-  ContainerFrame3BackgroundMiddle1,
-  ContainerFrame3BackgroundBottom,
-	ContainerFrame2BackgroundTop,
-  ContainerFrame2BackgroundMiddle1,
-  ContainerFrame2BackgroundBottom,
-	ContainerFrame1BackgroundTop,
-	MinimapBorderTop,
-  MinimapBorder,
-  MiniMapTrackingBorder,
-  MiniMapTrackingButtonBorder,
-  PlayerFrameTexture,
-  TargetFrameTextureFrameTexture,
-	TargetFrameToTTextureFrameTexture,
-  PetFrameTexture,
-  CharacterFrameBg,
-	CharacterFrameTitleBg,
-	CompactRaidFrameManagerBg,
-  CastingBarFrame.Border
- }
--- change these rgb values to change the color of the
--- default action bar background artwork
-
-local red = 0.4
-local green = 0.4
-local blue = 0.4
-
-for i=1,#t do
-  t[i]:SetDesaturated(true)
-  t[i]:SetVertexColor(red,green,blue)
-end
+-- class icon portraits
+hooksecurefunc("UnitFramePortrait_Update",function(self)
+    if self.portrait then
+        if UnitIsPlayer(self.unit) then                
+            local t = CLASS_ICON_TCOORDS[select(2, UnitClass(self.unit))]
+            if t then
+                self.portrait:SetTexture("Interface\\TargetingFrame\\UI-Classes-Circles")
+                self.portrait:SetTexCoord(unpack(t))
+            end
+        else
+            self.portrait:SetTexCoord(0,1,0,1)
+        end
+    end
+end)
 
 -- remove pvp, faction & group indication
 PlayerPVPIcon:SetAlpha(0)
@@ -63,14 +39,14 @@ end)
 --  end
 --end)
 
-hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function()
-  if TargetFrameDebuff1 then
-    TargetFrameDebuff1:ClearAllPoints()
-    TargetFrameDebuff1:SetPoint("TOP", UIParent, "CENTER", 125, 0)
-  end
-end)
-
-local noop = function() return end
+--hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function()
+--  if TargetFrameDebuff1 then
+--    TargetFrameDebuff1:ClearAllPoints()
+--    TargetFrameDebuff1:SetPoint("TOP", UIParent, "CENTER", 125, 0)
+--  end
+--end)
+--
+--local noop = function() return end
 
 --[[ Unitframes ]]
 --TotemFrame:ClearAllPoints() 
@@ -178,17 +154,33 @@ SLASH_RCSLASH1 = "/rc"
 SlashCmdList["TICKET"] = function() ToggleHelpFrame() end
 SLASH_TICKET1 = "/gm"
 
-local selljunk = CreateFrame("Frame")
-	selljunk:RegisterEvent("MERCHANT_SHOW")
+local t={
+	ContainerFrame5BackgroundTop,ContainerFrame5BackgroundMiddle1,ContainerFrame5BackgroundBottom,
+	ContainerFrame4BackgroundTop,ContainerFrame4BackgroundMiddle1,ContainerFrame4BackgroundBottom,
+	ContainerFrame3BackgroundTop,ContainerFrame3BackgroundMiddle1,ContainerFrame3BackgroundBottom,
+	ContainerFrame2BackgroundTop,ContainerFrame2BackgroundMiddle1,ContainerFrame2BackgroundBottom,
+	ContainerFrame1BackgroundTop, CastingBarFrame.Border,
+	MinimapBorderTop,MinimapBorder,PlayerFrameTexture, TargetFrameTextureFrameTexture, TargetFrameToTTextureFrameTexture,
+	MainMenuBarLeftEndCap,MainMenuBarRightEndCap,
+	MainMenuBarTexture0, MainMenuBarTexture1,
+	MainMenuBarTexture2, MainMenuBarTexture3,
+	MainMenuMaxLevelBar0, MainMenuMaxLevelBar1,
+	MainMenuMaxLevelBar2, MainMenuMaxLevelBar3,
+	MainMenuXPBarTextureLeftCap, MainMenuXPBarTextureRightCap,
+	MainMenuXPBarTextureMid,
+	ReputationWatchBarTexture0, ReputationWatchBarTexture1, --?
+	ReputationWatchBarTexture2, ReputationWatchBarTexture3, --?
+	ReputationXPBarTexture0, ReputationXPBarTexture1,
+	ReputationXPBarTexture2, ReputationXPBarTexture3
+ }
+-- change these rgb values to change the color of the
+-- default action bar background artwork
 
-selljunk:SetScript("OnEvent", function()  
-local bag, slot
-	for bag = 0, 4 do
-		for slot = 0, GetContainerNumSlots(bag) do
-			local link = GetContainerItemLink(bag, slot)
-				if link and (select(3, GetItemInfo(link)) == 0) then
-					UseContainerItem(bag, slot)
-			end
-		end
-	end
-end)
+local red = 0.3
+local green = 0.3
+local blue = 0.3
+
+for i=1,#t do
+  t[i]:SetDesaturated(true)
+  t[i]:SetVertexColor(red,green,blue)
+end

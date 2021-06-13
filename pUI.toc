@@ -13,3 +13,8 @@ nbuff\config.lua
 nbuff\core.lua
 ##daftNameCastBars\daftNameCastBars.lua
 ##daftNameCastBars\Options.lua
+FastFilger\Spells.lua
+FastFilger\PVPSpells.lua
+FastFilger\Style.lua
+FastFilger\Lib.lua
+FastFilger\Core.lua
