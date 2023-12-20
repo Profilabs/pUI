@@ -3,7 +3,7 @@
 ## Author: various
 
 Castbars.lua
-Chat.lua
+##Chat.lua
 Minimap.lua
 ##RaidFrameReSizer.lua
 core.lua

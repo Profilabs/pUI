@@ -43,8 +43,8 @@ function addon:SetupFrames()
 			CastingBarFrame.Icon:Show();
 			CastingBarFrame.Icon:ClearAllPoints();
 			CastingBarFrame.Icon:SetPoint("CENTER", PlayerPortrait, "CENTER", 0, 0);
-			CastingBarFrame.Icon:SetWidth(PlayerPortrait:GetWidth()*.83);
-			CastingBarFrame.Icon:SetHeight(PlayerPortrait:GetHeight()*.83);
+			CastingBarFrame.Icon:SetWidth(PlayerPortrait:GetWidth()*.88);
+			CastingBarFrame.Icon:SetHeight(PlayerPortrait:GetHeight()*.88);
 			CastingBarFrame.Icon:SetTexCoord(0.1, 0.9, 0.1, 0.9);
 		end;
 		

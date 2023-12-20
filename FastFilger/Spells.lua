@@ -899,7 +899,7 @@ Filger_Spells = {
 			{spellID = 193065, unitID = "player", caster = "player", filter = "BUFF"},
 
             -- Inner Fire
-            {spellID = 10951, unitID = "player", caster = "player", filter = "BUFF"},
+            {spellID = 588, unitID = "player", caster = "player", filter = "BUFF"},
             -- Power Infusion
             {spellID = 10060, unitID = "player", caster = "player", filter = "BUFF"},
             -- Spirit Shell
@@ -910,7 +910,9 @@ Filger_Spells = {
             {spellID = 17, unitID = "player", caster = "all", filter = "BUFF"},
 			{spellID = 10900, unitID = "player", caster = "player", filter = "BUFF"},
             -- Renew
-            {spellID = 139, unitID = "player", caster = "player", filter = "BUFF"},
+            {spellID = 139, unitID = "player", caster = "all", filter = "BUFF"},
+            {spellID = 6075, unitID = "player", caster = "all", filter = "BUFF"},
+            {spellID = 17191, unitID = "player", caster = "all", filter = "BUFF"},
             -- Fade
             {spellID = 586, unitID = "player", caster = "player", filter = "BUFF"},
             -- Focused Will

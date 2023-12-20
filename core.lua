@@ -184,3 +184,53 @@ for i=1,#t do
   t[i]:SetDesaturated(true)
   t[i]:SetVertexColor(red,green,blue)
 end
+
+-- blue shaman
+RAID_CLASS_COLORS = {
+    ["HUNTER"] = { r = 0.67, g = 0.83, b = 0.45, colorStr = "ffabd473" },
+    ["WARLOCK"] = { r = 0.58, g = 0.51, b = 0.79, colorStr = "ff9482c9" },
+    ["PRIEST"] = { r = 1.0, g = 1.0, b = 1.0, colorStr = "ffffffff" },
+    ["PALADIN"] = { r = 0.96, g = 0.55, b = 0.73, colorStr = "fff58cba" },
+    ["MAGE"] = { r = 0.41, g = 0.8, b = 0.94, colorStr = "ff69ccf0" },
+    ["ROGUE"] = { r = 1.0, g = 0.96, b = 0.41, colorStr = "fffff569" },
+    ["DRUID"] = { r = 1.0, g = 0.49, b = 0.04, colorStr = "ffff7d0a" },
+    ["SHAMAN"] = { r = 0.0, g = 0.44, b = 0.87, colorStr = "ff0070de" },
+    ["WARRIOR"] = { r = 0.78, g = 0.61, b = 0.43, colorStr = "ffc79c6e" },
+};
+
+-- Unclamp chat frames and put editbox on top
+for i=1, NUM_CHAT_WINDOWS, 1 do
+    local cf = _G["ChatFrame"..i];
+    cf:SetClampedToScreen(false);
+    cf.editBox:ClearAllPoints();
+    cf.editBox:SetPoint("BOTTOMLEFT", cf, "TOPLEFT", -5, 5);
+    cf.editBox:SetPoint("BOTTOMRIGHT", cf, "TOPRIGHT", 5, 5);
+end
+
+-- Shorten channel names. 
+-- This particular function is only used for outputting names in chat, so it has no side effects.
+local origfunc = ChatFrame_ResolvePrefixedChannelName;
+function ChatFrame_ResolvePrefixedChannelName(communityChannel)
+    local channelName = origfunc(communityChannel);
+
+    if channelName:find("%u") then
+        local start = channelName:find("-");
+        if start then
+            channelName = channelName:sub(1, start-2);
+        end
+        return channelName:gsub("%l", "");
+    end
+
+    return channelName;
+end
+
+-- Every command has it's history...
+SLASH_CCFSLASH1 = "/ccfreset";
+SlashCmdList["CCFSLASH"] = function(arg)
+    local argnum = tonumber(arg);
+    if argnum == nil or argnum > NUM_CHAT_WINDOWS then
+        argnum = 1;
+    end
+    _G["ChatFrame"..argnum]:ClearAllPoints();
+    _G["ChatFrame"..argnum]:SetPoint("BOTTOMLEFT", UIParent, 100, 100);
+end;

@@ -44,6 +44,9 @@ CharacterBag2Slot:Hide()
 CharacterBag3Slot:Hide()
 -- hide micro menu
 CharacterMicroButton:Hide()
+WorldMapMicroButton:Hide()
+WorldMapMicroButton:SetScale(0.0001)
+WorldMapMicroButton:EnableMouse(false)
 SpellbookMicroButton:Hide()
 TalentMicroButton:SetScale(0.0001)
 TalentMicroButton:EnableMouse(false)
@@ -59,7 +62,7 @@ MainMenuBarPerformanceBar:Hide()
 ActionBarDownButton:Hide()
 ActionBarUpButton:Hide()
 -- action bar location
---MainMenuBar:SetScale(0.8)
+MainMenuBar:SetScale(0.9)
 MainMenuBar:ClearAllPoints()
 MainMenuBar:SetPoint('BOTTOMLEFT', UIParent, 5, 5)
 --pet bar
