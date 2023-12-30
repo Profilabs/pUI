@@ -14,9 +14,9 @@ hooksecurefunc("UnitFramePortrait_Update",function(self)
 end)
 
 -- remove pvp, faction & group indication
-PlayerPVPIcon:SetAlpha(0)
-TargetFrameTextureFramePVPIcon:SetAlpha(0)
-PlayerFrameGroupIndicator.Show = function() return end
+--PlayerPVPIcon:SetAlpha(0)
+--TargetFrameTextureFramePVPIcon:SetAlpha(0)
+--PlayerFrameGroupIndicator.Show = function() return end
 
 -- hide glow
 hooksecurefunc("PlayerFrame_UpdateStatus", function()
@@ -68,42 +68,16 @@ end)
 --PartyMemberFrame1:SetPoint("TOPLEFT", 175, -375) 
 --PartyMemberFrame1.SetPoint=function()end
 
---[[ Move Partydebuffs]]
-for i=1,4 do
-        local f = _G["PartyMemberFrame"..i]
-        f:UnregisterEvent("UNIT_AURA")
-        local g = CreateFrame("Frame")
-        g:RegisterEvent("UNIT_AURA")
-        g:SetScript("OnEvent",function(self,event,a1)
-                if a1 == f.unit then
-                        RefreshDebuffs(f,a1,20,nil,1)
-                else
-                        if a1 == f.unit.."pet" then
-                                PartyMemberFrame_RefreshPetDebuffs(f)
-                        end
-                end
-        end)
-        local b = _G[f:GetName().."Debuff1"]
-        b:ClearAllPoints()
-        b:SetPoint("LEFT",f,"RIGHT",-7,5)
-        for j=5,20 do
-                local l = f:GetName().."Debuff"
-                local n = l..j
-                local c = CreateFrame("Frame",n,f,"PartyDebuffFrameTemplate")
-                c:SetPoint("LEFT",_G[l..(j-1)],"RIGHT")
-        end
-end
-
 
 --[[ PvP Icon ]]
---PlayerPVPIcon:SetAlpha(0)
---TargetFrameTextureFramePVPIcon:SetAlpha(0)
---FocusFrameTextureFramePVPIcon:SetAlpha(0)
---for i = 1, MAX_PARTY_MEMBERS do
---_G["PartyMemberFrame"..i.."PVPIcon"]:Hide()
---_G["PartyMemberFrame"..i.."HealthBarText"]:Hide()
---_G["PartyMemberFrame"..i.."ManaBarText"]:Hide()
---end
+PlayerPVPIcon:SetAlpha(0)
+TargetFrameTextureFramePVPIcon:SetAlpha(0)
+FocusFrameTextureFramePVPIcon:SetAlpha(0)
+for i = 1, MAX_PARTY_MEMBERS do
+_G["PartyMemberFrame"..i.."PVPIcon"]:Hide()
+_G["PartyMemberFrame"..i.."HealthBarText"]:Hide()
+_G["PartyMemberFrame"..i.."ManaBarText"]:Hide()
+end
 
 --[[ Hide ]]
 --hooksecurefunc(	"PlayerFrame_UpdateStatus",	function()

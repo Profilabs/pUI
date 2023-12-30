@@ -3,6 +3,13 @@ local Filger = {}
 local Filger_Spells = Filger_Spells or {}
 local MyUnits = {player = true, vehicle = true, pet = true}
 local class = select(2, UnitClass("player"))
+local UnitAura = _G.UnitAura
+
+local LibClassicDurations = LibStub("LibClassicDurations", true)
+if LibClassicDurations then
+    LibClassicDurations:Register("YourAddon")
+    UnitAura = LibClassicDurations.UnitAuraWrapper
+end
 
 local Misc = CreateFrame("Frame")
 Misc.font = "Interface\\Addons\\pUI\\FastFilger\\Media\\".."number.ttf"

@@ -64,7 +64,7 @@ ActionBarUpButton:Hide()
 -- action bar location
 MainMenuBar:SetScale(0.9)
 MainMenuBar:ClearAllPoints()
-MainMenuBar:SetPoint('BOTTOMLEFT', UIParent, 5, 5)
+MainMenuBar:SetPoint('BOTTOMLEFT', UIParent, 5, 9)
 --pet bar
 --PetActionBarFrame:SetScale(0.8)
 --PetActionBarFrame:ClearAllPoints()

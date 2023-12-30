@@ -910,9 +910,7 @@ Filger_Spells = {
             {spellID = 17, unitID = "player", caster = "all", filter = "BUFF"},
 			{spellID = 10900, unitID = "player", caster = "player", filter = "BUFF"},
             -- Renew
-            {spellID = 139, unitID = "player", caster = "all", filter = "BUFF"},
-            {spellID = 6075, unitID = "player", caster = "all", filter = "BUFF"},
-            {spellID = 17191, unitID = "player", caster = "all", filter = "BUFF"},
+            {spellID = 139, unitID = "player", caster = "player", filter = "BUFF"},
             -- Fade
             {spellID = 586, unitID = "player", caster = "player", filter = "BUFF"},
             -- Focused Will
@@ -931,6 +929,8 @@ Filger_Spells = {
             {spellID = 10890, unitID = "player", caster = "player", filter = "CD"},
             {spellID = 10947, unitID = "player", caster = "player", filter = "CD"},
 			{spellID = 32379, unitID = "player", caster = "player", filter = "CD"},
+            {spellID = 402174, unitID = "player", caster = "player", filter = "CD"},
+            {spellID = 401859, unitID = "player", caster = "player", filter = "CD"},
         },
         {
             Name = "P_PROC_ICON",
@@ -965,6 +965,7 @@ Filger_Spells = {
 			{spellID = 10894, unitID = "target", caster = "player", filter = "DEBUFF"},
             {spellID = 15286, unitID = "target", caster = "player", filter = "DEBUFF"},
 			{spellID = 34916, unitID = "target", caster = "player", filter = "DEBUFF"},
+            {spellID = 139, unitID = "target", caster = "player", filter = "BUFF"},
 
             -- Void Tendril's Grasp
             {spellID = 114404, unitID = "target", caster = "player", filter = "DEBUFF"},
