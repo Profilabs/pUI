@@ -27,9 +27,9 @@ RAID_CLASS_COLORS = {
 };
 
 -- remove pvp, faction & group indication
-PlayerPVPIcon:SetAlpha(0)
-TargetFrameTextureFramePVPIcon:SetAlpha(0)
-PlayerFrameGroupIndicator.Show = function() return end
+--PlayerPVPIcon:SetAlpha(0)
+--TargetFrameTextureFramePVPIcon:SetAlpha(0)
+--PlayerFrameGroupIndicator.Show = function() return end
 
 -- hide glow
 hooksecurefunc("PlayerFrame_UpdateStatus", function()
@@ -84,14 +84,14 @@ end)
 --PartyMemberFrame1.SetPoint=function()end
 
 --[[ PvP Icon ]]
---PlayerPVPIcon:SetAlpha(0)
---TargetFrameTextureFramePVPIcon:SetAlpha(0)
---FocusFrameTextureFramePVPIcon:SetAlpha(0)
---for i = 1, MAX_PARTY_MEMBERS do
---_G["PartyMemberFrame"..i.."PVPIcon"]:Hide()
---_G["PartyMemberFrame"..i.."HealthBarText"]:Hide()
---_G["PartyMemberFrame"..i.."ManaBarText"]:Hide()
---end
+PlayerPVPIcon:SetAlpha(0)
+TargetFrameTextureFramePVPIcon:SetAlpha(0)
+FocusFrameTextureFramePVPIcon:SetAlpha(0)
+for i = 1, MAX_PARTY_MEMBERS do
+_G["PartyMemberFrame"..i.."PVPIcon"]:Hide()
+_G["PartyMemberFrame"..i.."HealthBarText"]:Hide()
+_G["PartyMemberFrame"..i.."ManaBarText"]:Hide()
+end
 
 --[[ Hide ]]
 --hooksecurefunc(	"PlayerFrame_UpdateStatus",	function()

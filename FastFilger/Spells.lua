@@ -899,7 +899,7 @@ Filger_Spells = {
 			{spellID = 193065, unitID = "player", caster = "player", filter = "BUFF"},
 
             -- Inner Fire
-            {spellID = 10951, unitID = "player", caster = "player", filter = "BUFF"},
+            {spellID = 588, unitID = "player", caster = "player", filter = "BUFF"},
             -- Power Infusion
             {spellID = 10060, unitID = "player", caster = "player", filter = "BUFF"},
             -- Spirit Shell
