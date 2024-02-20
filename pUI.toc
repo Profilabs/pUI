@@ -1,20 +1,27 @@
-## Interface: 11305
+## Interface: 11500
 ## Title:|cffCC3333 p|rUI
 ## Author: various
 
-Castbars.lua
-Chat.lua
+##Castbars.lua
+##Chat.lua
 Minimap.lua
 ##RaidFrameReSizer.lua
 core.lua
 Actionsbars.lua
-UnitFramesImproved.lua
+##UnitFramesImproved.lua
 nbuff\config.lua
 nbuff\core.lua
-##daftNameCastBars\daftNameCastBars.lua
-##daftNameCastBars\Options.lua
-FastFilger\Spells.lua
-FastFilger\PVPSpells.lua
-FastFilger\Style.lua
-FastFilger\Lib.lua
-FastFilger\Core.lua
+daftNameCastBars\daftNameCastBars.lua
+daftNameCastBars\Options.lua
+##FastFilger\Spells.lua
+##FastFilger\PVPSpells.lua
+##FastFilger\Style.lua
+##FastFilger\Lib.lua
+##FastFilger\Core.lua
+aSCT\config.lua
+aSCT\utils.lua
+aSCT\top.lua
+aSCT\core.lua
+aSCT\init.lua
+DejaChat\DejaChatClassic.lua
+DejaChat\DejaChatTabs.lua

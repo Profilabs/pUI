@@ -13,7 +13,7 @@ nBuff.Config = {
     borderDebuff = 'Interface\\AddOns\\pUI\\nBuff\\media\\textureDebuff',
 
     debuffSize = 46,
-    debuffScale = 1.7,
+    debuffScale = 1.5,
 
     debuffFontSize = 14,
     debuffCountSize = 16,

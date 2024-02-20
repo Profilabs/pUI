@@ -13,6 +13,19 @@ hooksecurefunc("UnitFramePortrait_Update",function(self)
     end
 end)
 
+-- blue shaman
+RAID_CLASS_COLORS = {
+    ["HUNTER"] = { r = 0.67, g = 0.83, b = 0.45, colorStr = "ffabd473" },
+    ["WARLOCK"] = { r = 0.58, g = 0.51, b = 0.79, colorStr = "ff9482c9" },
+    ["PRIEST"] = { r = 1.0, g = 1.0, b = 1.0, colorStr = "ffffffff" },
+    ["PALADIN"] = { r = 0.96, g = 0.55, b = 0.73, colorStr = "fff58cba" },
+    ["MAGE"] = { r = 0.41, g = 0.8, b = 0.94, colorStr = "ff69ccf0" },
+    ["ROGUE"] = { r = 1.0, g = 0.96, b = 0.41, colorStr = "fffff569" },
+    ["DRUID"] = { r = 1.0, g = 0.49, b = 0.04, colorStr = "ffff7d0a" },
+    ["SHAMAN"] = { r = 0.0, g = 0.44, b = 0.87, colorStr = "ff0070de" },
+    ["WARRIOR"] = { r = 0.78, g = 0.61, b = 0.43, colorStr = "ffc79c6e" },
+};
+
 -- remove pvp, faction & group indication
 PlayerPVPIcon:SetAlpha(0)
 TargetFrameTextureFramePVPIcon:SetAlpha(0)
@@ -30,6 +43,8 @@ hooksecurefunc("PlayerFrame_UpdateStatus", function()
        PlayerStatusGlow:Hide()
     end
 end)
+
+
 
 --Move Target Frame Debuffs
 --hooksecurefunc("TargetFrame_UpdateBuffAnchor", function()
@@ -68,33 +83,6 @@ end)
 --PartyMemberFrame1:SetPoint("TOPLEFT", 175, -375) 
 --PartyMemberFrame1.SetPoint=function()end
 
---[[ Move Partydebuffs]]
-for i=1,4 do
-        local f = _G["PartyMemberFrame"..i]
-        f:UnregisterEvent("UNIT_AURA")
-        local g = CreateFrame("Frame")
-        g:RegisterEvent("UNIT_AURA")
-        g:SetScript("OnEvent",function(self,event,a1)
-                if a1 == f.unit then
-                        RefreshDebuffs(f,a1,20,nil,1)
-                else
-                        if a1 == f.unit.."pet" then
-                                PartyMemberFrame_RefreshPetDebuffs(f)
-                        end
-                end
-        end)
-        local b = _G[f:GetName().."Debuff1"]
-        b:ClearAllPoints()
-        b:SetPoint("LEFT",f,"RIGHT",-7,5)
-        for j=5,20 do
-                local l = f:GetName().."Debuff"
-                local n = l..j
-                local c = CreateFrame("Frame",n,f,"PartyDebuffFrameTemplate")
-                c:SetPoint("LEFT",_G[l..(j-1)],"RIGHT")
-        end
-end
-
-
 --[[ PvP Icon ]]
 --PlayerPVPIcon:SetAlpha(0)
 --TargetFrameTextureFramePVPIcon:SetAlpha(0)
@@ -120,13 +108,13 @@ end
 --)
 
 --[[ Disable healing spam floating combat text ]]
-LoadAddOn("Blizzard_CombatText")
-COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL"] = {var = nil, show = nil}
-COMBAT_TEXT_TYPE_INFO["HEAL_CRIT"] = {var = nil, show = nil}
-COMBAT_TEXT_TYPE_INFO["HEAL"] = {var = nil, show = nil}
-COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL_ABSORB"] = {var = nil, show = nil}
-COMBAT_TEXT_TYPE_INFO["HEAL_CRIT_ABSORB"] = {var = nil, show = nil}
-COMBAT_TEXT_TYPE_INFO["HEAL_ABSORB"] = {var = nil, show = nil}
+--LoadAddOn("Blizzard_CombatText")
+--COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL"] = {var = nil, show = nil}
+--COMBAT_TEXT_TYPE_INFO["HEAL_CRIT"] = {var = nil, show = nil}
+--COMBAT_TEXT_TYPE_INFO["HEAL"] = {var = nil, show = nil}
+--COMBAT_TEXT_TYPE_INFO["PERIODIC_HEAL_ABSORB"] = {var = nil, show = nil}
+--COMBAT_TEXT_TYPE_INFO["HEAL_CRIT_ABSORB"] = {var = nil, show = nil}
+--COMBAT_TEXT_TYPE_INFO["HEAL_ABSORB"] = {var = nil, show = nil}
 
 --[[Frame placement]]--
 --PlayerFrame:ClearAllPoints()
@@ -153,34 +141,3 @@ SLASH_RCSLASH1 = "/rc"
 
 SlashCmdList["TICKET"] = function() ToggleHelpFrame() end
 SLASH_TICKET1 = "/gm"
-
-local t={
-	ContainerFrame5BackgroundTop,ContainerFrame5BackgroundMiddle1,ContainerFrame5BackgroundBottom,
-	ContainerFrame4BackgroundTop,ContainerFrame4BackgroundMiddle1,ContainerFrame4BackgroundBottom,
-	ContainerFrame3BackgroundTop,ContainerFrame3BackgroundMiddle1,ContainerFrame3BackgroundBottom,
-	ContainerFrame2BackgroundTop,ContainerFrame2BackgroundMiddle1,ContainerFrame2BackgroundBottom,
-	ContainerFrame1BackgroundTop, CastingBarFrame.Border,
-	MinimapBorderTop,MinimapBorder,PlayerFrameTexture, TargetFrameTextureFrameTexture, TargetFrameToTTextureFrameTexture,
-	MainMenuBarLeftEndCap,MainMenuBarRightEndCap,
-	MainMenuBarTexture0, MainMenuBarTexture1,
-	MainMenuBarTexture2, MainMenuBarTexture3,
-	MainMenuMaxLevelBar0, MainMenuMaxLevelBar1,
-	MainMenuMaxLevelBar2, MainMenuMaxLevelBar3,
-	MainMenuXPBarTextureLeftCap, MainMenuXPBarTextureRightCap,
-	MainMenuXPBarTextureMid,
-	ReputationWatchBarTexture0, ReputationWatchBarTexture1, --?
-	ReputationWatchBarTexture2, ReputationWatchBarTexture3, --?
-	ReputationXPBarTexture0, ReputationXPBarTexture1,
-	ReputationXPBarTexture2, ReputationXPBarTexture3
- }
--- change these rgb values to change the color of the
--- default action bar background artwork
-
-local red = 0.3
-local green = 0.3
-local blue = 0.3
-
-for i=1,#t do
-  t[i]:SetDesaturated(true)
-  t[i]:SetVertexColor(red,green,blue)
-end

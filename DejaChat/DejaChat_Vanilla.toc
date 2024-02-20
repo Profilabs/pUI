@@ -1,0 +1,8 @@
+## Interface: 11404
+## Version: Uv7
+## Title: DejaChat
+## Authors: Dejablue, Phanx
+## Notes: Dejablue's simple chat.
+
+DejaChatClassic.lua
+DejaChatTabs.lua

@@ -39,7 +39,7 @@ end
 
 -- Event listener to make sure we've loaded our settings and thta we apply them
 function UnitFramesImproved:VARIABLES_LOADED()
-	dout("pUI loaded successfully!");
+	dout("|cffCC3333 p|rUI loaded successfully!");
 
 	-- Set some default settings
 	if (characterSettings == nil) then

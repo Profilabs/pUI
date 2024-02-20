@@ -929,6 +929,7 @@ Filger_Spells = {
             {spellID = 10890, unitID = "player", caster = "player", filter = "CD"},
             {spellID = 10947, unitID = "player", caster = "player", filter = "CD"},
 			{spellID = 32379, unitID = "player", caster = "player", filter = "CD"},
+            {spellID = 19280, unitID = "player", caster = "player", filter = "CD"},
         },
         {
             Name = "P_PROC_ICON",
@@ -963,6 +964,7 @@ Filger_Spells = {
 			{spellID = 10894, unitID = "target", caster = "player", filter = "DEBUFF"},
             {spellID = 15286, unitID = "target", caster = "player", filter = "DEBUFF"},
 			{spellID = 34916, unitID = "target", caster = "player", filter = "DEBUFF"},
+            {spellID = 19280, unitID = "target", caster = "player", filter = "DEBUFF"},
 
             -- Void Tendril's Grasp
             {spellID = 114404, unitID = "target", caster = "player", filter = "DEBUFF"},
