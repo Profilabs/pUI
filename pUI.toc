@@ -8,7 +8,7 @@
 Minimap.lua
 ##RaidFrameReSizer.lua
 core.lua
-Actionsbars.lua
+##Actionsbars.lua
 ##UnitFramesImproved.lua
 nbuff\config.lua
 nbuff\core.lua
